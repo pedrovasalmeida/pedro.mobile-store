@@ -1,8 +1,8 @@
 import React from 'react';
 
-import {Home, ScreensName} from '../../../screens';
+import {Home, ScreensName} from '@/screens';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Category} from '../../../screens/Category';
+import {Category} from '@/screens/Category';
 import {Text, TouchableOpacity, View} from 'react-native';
 
 const Stack = createNativeStackNavigator();

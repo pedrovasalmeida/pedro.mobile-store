@@ -1,8 +1,11 @@
 import React from 'react';
 
-import {ScreensName} from '../../screens';
+import {ScreensName} from '@/screens';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {AccountStackNavigator, HomeStackNavigator} from '../stackNavigator';
+import {
+  AccountStackNavigator,
+  HomeStackNavigator,
+} from '@/routes/stackNavigator';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import tailwind from 'twrnc';
 

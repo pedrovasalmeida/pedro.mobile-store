@@ -5,6 +5,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {
   AccountStackNavigator,
   HomeStackNavigator,
+  ProductsStackNavigator,
 } from '@/routes/stackNavigator';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import tailwind from 'twrnc';
@@ -24,6 +25,10 @@ export const TabRoutes: React.FC = () => {
         <Tab.Screen
           name={ScreensName.account.defaultScreenName}
           component={AccountStackNavigator}
+        />
+        <Tab.Screen
+          name={ScreensName.products.defaultScreenName}
+          component={ProductsStackNavigator}
         />
       </Tab.Navigator>
     </SafeAreaView>

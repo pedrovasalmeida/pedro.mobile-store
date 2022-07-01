@@ -1,16 +1,16 @@
 import React from 'react';
 
-import {Account, ScreensName} from '@/screens';
+import {ScreensName} from '@/screens';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Profile} from '@/screens/Profile';
 import {Text, TouchableOpacity} from 'react-native';
+import {ProductDetails} from '@/screens/Product/Details';
 
 const Stack = createNativeStackNavigator();
 
-export const AccountStackNavigator: React.FC = () => {
+export const ProductsStackNavigator: React.FC = () => {
   return (
     <Stack.Navigator
-      initialRouteName={ScreensName.account.initial}
+      initialRouteName={ScreensName.home.initial}
       screenOptions={{
         headerShown: true,
         headerLeft: ({canGoBack}) =>
@@ -20,8 +20,10 @@ export const AccountStackNavigator: React.FC = () => {
             </TouchableOpacity>
           ) : undefined,
       }}>
-      <Stack.Screen name={ScreensName.account.initial} component={Account} />
-      <Stack.Screen name={ScreensName.account.profile} component={Profile} />
+      <Stack.Screen
+        name={ScreensName.products.details}
+        component={ProductDetails}
+      />
     </Stack.Navigator>
   );
 };

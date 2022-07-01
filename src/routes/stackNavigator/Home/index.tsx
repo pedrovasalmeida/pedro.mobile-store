@@ -3,11 +3,11 @@ import React from 'react';
 import {Home, ScreensName} from '@/screens';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Category} from '@/screens/Category';
-import {Text, TouchableOpacity, View} from 'react-native';
+import {Text, TouchableOpacity} from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
-export const HomeStackNavigator: React.FC = ({navigation}) => {
+export const HomeStackNavigator: React.FC = () => {
   return (
     <Stack.Navigator
       initialRouteName={ScreensName.home.initial}
@@ -15,7 +15,7 @@ export const HomeStackNavigator: React.FC = ({navigation}) => {
         headerShown: true,
         headerLeft: ({canGoBack}) =>
           canGoBack ? (
-            <TouchableOpacity onPress={navigation.goBack}>
+            <TouchableOpacity onPress={() => null}>
               <Text>Voltar</Text>
             </TouchableOpacity>
           ) : undefined,

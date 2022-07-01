@@ -14,4 +14,9 @@ export const ScreensName = {
     initial: 'Account',
     profile: 'Profile',
   },
+  products: {
+    defaultScreenName: 'ProductsStack',
+    initial: 'Products',
+    details: 'ProductDetails',
+  },
 };
